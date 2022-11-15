@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import styled from "styled-components";
+import Footer from "./components/footer.js";
+import Header from "./components/header.js";
+import MainPage from "./components/main.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </Layout>
   );
 }
+
+const Layout = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
 
 export default App;
