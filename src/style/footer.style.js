@@ -41,6 +41,6 @@ export const Contact = styled.p`
   display: inline-block;
   font-size: 20px;
   margin-top: 10px;
-  padding-bttom: 0;
+  /* padding-bttom: 0; */
   padding-left: 30px;
 `;
