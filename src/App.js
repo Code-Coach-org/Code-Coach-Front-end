@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Footer from "./components/footer.js";
 import Header from "./components/header.js";
 import MainPage from "./components/main.js";
+import MyPage from "./pages/my/MyPage";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<MainPage />} />
+          <Route path="/mypage" element={<MyPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
