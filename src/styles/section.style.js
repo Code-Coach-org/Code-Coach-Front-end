@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SectionContainer = styled.div`
-  //   border: 1px solid #555;
+  // border: 1px solid #555;
   width: 100%;
   height: 150px;
   color: black;
@@ -15,7 +15,6 @@ export const Line = styled.hr`
 `;
 
 export const ImageContainer = styled.div`
-  //   border: 1px solid #555;
   width: 100%;
   height: 70px;
   display: flex;

@@ -1,27 +1,20 @@
-import {
-  FooterContainer,
-  FooterLeft,
-  LeftLogo,
-  FooterRight,
-  RightInfo,
-  Contact,
-} from "../styles/footer.style.ts";
+import * as S from "../styles/footer.style";
 
 export default function Footer() {
   return (
     <>
-      <FooterContainer>
-        <FooterLeft>
-          <LeftLogo>
+      <S.FooterContainer>
+        <S.FooterLeft>
+          <S.LeftLogo>
             {"{"}Code_Coach{"}"}
-          </LeftLogo>
-        </FooterLeft>
-        <FooterRight>
-          <RightInfo>
-            <Contact>contact: codecoach e-mail number: 010-xxxx-xxxx </Contact>
-          </RightInfo>
-        </FooterRight>
-      </FooterContainer>
+          </S.LeftLogo>
+        </S.FooterLeft>
+        <S.FooterRight>
+          <S.RightInfo>
+            <S.Contact>contact: codecoach e-mail number: 010-xxxx-xxxx </S.Contact>
+          </S.RightInfo>
+        </S.FooterRight>
+      </S.FooterContainer>
     </>
   );
 }

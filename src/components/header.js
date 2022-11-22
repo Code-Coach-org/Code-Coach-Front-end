@@ -1,6 +1,12 @@
 import React from "react";
 import * as S from "../style/header.style";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
+const navStyle = {
+  textDecoration: "none",
+  color: "black",
+  backgroundColor: "#ededed",
+};
 
 function Header() {
   return (
