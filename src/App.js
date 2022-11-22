@@ -4,6 +4,7 @@ import Footer from "./components/footer.js";
 import Header from "./components/header.js";
 import MainPage from "./components/main.js";
 import MyPage from "./pages/my/MyPage";
+import { Community } from "./pages/community.js";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/mypage" element={<MyPage />} />
+          <Route path="/community" element={<Community />} />
         </Routes>
         <Footer />
       </BrowserRouter>
@@ -22,6 +24,7 @@ function App() {
 
 const Layout = styled.div`
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
