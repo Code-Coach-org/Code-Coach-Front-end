@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "../style/header.style";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const navStyle = {
   textDecoration: "none",
@@ -30,7 +30,9 @@ function Header() {
           </NavLink>
         </S.NavList>
         <S.LoginBox>
-          <S.Btn>마이페이지</S.Btn>
+          <S.Btn>
+            <Link to="/mypage">마이페이지</Link>
+          </S.Btn>
           <S.Btn>로그아웃</S.Btn>
         </S.LoginBox>
       </S.HeaderBox>
