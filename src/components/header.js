@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "../style/header.style";
+import * as S from "../styles/header.style";
 import { Link, NavLink } from "react-router-dom";
 
 const navStyle = {
