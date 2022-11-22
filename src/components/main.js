@@ -1,17 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { News } from "./news";
+import * as S from "../styles/main.style";
+import News from "./news";
 import Slick from "./slick";
 
 export default function mainpage() {
   return (
-    <Frame>
-      <Slick />
-      <News />
-    </Frame>
+    <S.Layout>
+      <S.Frame>
+        <Slick />
+        <News />
+      </S.Frame>
+    </S.Layout>
   );
 }
-
-const Frame = styled.div`
-  width: 90%;
-`;

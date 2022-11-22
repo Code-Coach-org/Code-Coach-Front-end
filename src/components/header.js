@@ -22,7 +22,7 @@ function Header() {
           <NavLink style={navStyle} to="/">
             커뮤니티
           </NavLink>
-          <NavLink style={navStyle} to="/">
+          <NavLink style={navStyle} to="/class">
             수업
           </NavLink>
           <NavLink style={navStyle} to="/">

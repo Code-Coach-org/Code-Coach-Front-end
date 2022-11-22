@@ -13,6 +13,7 @@ export const Line = styled.hr`
   border: none;
   margin: 20px 0;
 `;
+
 export const ItemBox = styled.div`
   width: 30%;
 `;

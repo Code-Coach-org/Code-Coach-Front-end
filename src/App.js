@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Footer from "./components/footer.js";
 import Header from "./components/header.js";
 import MainPage from "./components/main.js";
+import ClassRoomPage from "./pages/classRoom/ClassRoomPage.js";
 import MyPage from "./pages/my/MyPage";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/mypage" element={<MyPage />} />
+          <Route path="/class" element={<ClassRoomPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
@@ -22,10 +24,7 @@ function App() {
 
 const Layout = styled.div`
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  height: 100%;
 `;
 
 export default App;
