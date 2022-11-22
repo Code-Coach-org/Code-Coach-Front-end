@@ -34,4 +34,5 @@ export const Btn = styled.button`
   background-color: white;
   border: none;
   padding: 10px;
+  cursor: pointer;
 `;

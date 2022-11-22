@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import * as S from "../styles/main.style";
 import News from "./news";
 import Slick from "./slick";

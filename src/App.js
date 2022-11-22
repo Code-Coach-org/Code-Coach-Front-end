@@ -5,6 +5,7 @@ import Header from "./components/header.js";
 import MainPage from "./components/main.js";
 import ClassRoomPage from "./pages/classRoom/ClassRoomPage.js";
 import MyPage from "./pages/my/MyPage";
+import { Community } from "./pages/community.js";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/class" element={<ClassRoomPage />} />
+          <Route path="/community" element={<Community />} />
         </Routes>
         <Footer />
       </BrowserRouter>
