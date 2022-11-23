@@ -3,9 +3,9 @@ import styled from "styled-components";
 import Footer from "./components/footer.js";
 import Header from "./components/header.js";
 import MainPage from "./components/main.js";
-import ClassRoomPage from "./pages/classRoom/ClassRoomPage.js";
 import MyPage from "./pages/my/MyPage";
-import { Community } from "./pages/community.js";
+import Community from "./pages/community.js";
+import * as P from "./pages"
 
 function App() {
   return (
@@ -15,7 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/mypage" element={<MyPage />} />
-          <Route path="/class" element={<ClassRoomPage />} />
+          <Route path="/class" element={<P.ClassRoomListPage />} />
+          <Route path="/class/:classId" element={<P.ClassRoomPage /> } />
           <Route path="/community" element={<Community />} />
         </Routes>
         <Footer />

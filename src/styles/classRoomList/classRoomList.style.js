@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-const maincolor = "#E9E9E9";
+import { MAIN_COLOR } from "../constants/color.constant";
 
 export const Layout = styled.div`
   width: 100%;
@@ -32,8 +31,9 @@ export const CardWrapper = styled.div`
 
 export const Card = styled.div`
   width: 12rem;
-  background-color: ${maincolor};
+  background-color: ${MAIN_COLOR};
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 `

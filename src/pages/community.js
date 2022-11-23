@@ -17,6 +17,8 @@ export const Community = () => {
   );
 };
 
+export default Community;
+
 const Frame = styled.div`
   display: flex;
   margin-top: 15px;
