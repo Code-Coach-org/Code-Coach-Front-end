@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ANCHOR_ACTIVE_COLOR } from "./constants/color.constant";
 
 export const Frame = styled.div`
   width: 100%;
@@ -22,6 +23,18 @@ export const NavList = styled.div`
   display: flex;
   justify-content: space-between;
   width: 30%;
+
+  > a {
+    text-decoration: none;
+  }
+
+  > a:not(.active) {
+    color: black;
+  }
+
+  > a:hover {
+    color: ${ANCHOR_ACTIVE_COLOR};
+  }
 `;
 
 export const LoginBox = styled.div`

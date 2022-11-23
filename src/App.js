@@ -15,9 +15,10 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/mypage" element={<MyPage />} />
-          <Route path="/class" element={<P.ClassRoomListPage />} />
-          <Route path="/class/:classId" element={<P.ClassRoomPage /> } />
           <Route path="/community" element={<Community />} />
+          <Route path="/class" element={<P.ClassListPage />} />
+          <Route path="/class/:classId" element={<P.ClassMainPage /> } />
+          <Route path="/class/:classId/report" element={<P.ClassReportPage /> } />
         </Routes>
         <Footer />
       </BrowserRouter>

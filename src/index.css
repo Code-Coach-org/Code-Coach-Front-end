@@ -3,14 +3,14 @@
   margin: 0;
 }
 
-.nav-item {
+a:not(.active) {
   text-decoration: none;
-  color: #343434;
+  color: black;
 }
 
 .active {
-  color: blue;
-  background-color: #ededed;
+  color: #03a9f4;
+  background-color: none !important;
 }
 
 body,

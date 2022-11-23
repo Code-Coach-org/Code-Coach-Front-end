@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MAIN_COLOR } from "../constants/color.constant";
+import { MAIN_COLOR } from "../../constants/color.constant"
 
 export const Layout = styled.div`
   width: 100%;

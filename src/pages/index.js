@@ -1,2 +1,3 @@
-export { default as ClassRoomListPage } from './classRoomList/ClassRoomListPage';
-export { default as ClassRoomPage } from './classRoom/ClassRoomPage';
+export { default as ClassListPage } from './class/classList/ClassListPage';
+export { default as ClassMainPage } from './class/classMain/ClassMainPage';
+export { default as ClassReportPage } from './class/classReport/ClassReportPage';

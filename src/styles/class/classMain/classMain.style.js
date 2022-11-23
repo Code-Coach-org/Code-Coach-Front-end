@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ANCHOR_ACTIVE_COLOR } from "../../constants/color.constant";
 
 export const Layout = styled.div`
   width: 100%;
@@ -13,9 +14,23 @@ export const Contents = styled.div`
   border-bottom: 1px solid black;
   padding: 2rem;
   gap: 2rem;
+
+  > a {
+    text-decoration: none;
+  }
+
+  > a:not(.active) {
+    color: black;
+  }
+
+  > a:hover {
+    color: ${ANCHOR_ACTIVE_COLOR};
+  }
+
 `
 
 export const Content = styled.div`
+  cursor: pointer;
   font-size: 1rem;
 `
 
@@ -35,8 +50,4 @@ export const Methods = styled.div`
 
 export const Method = styled.div`
   // TODO :: pdf업로드 구현시 추가
-`
-
-export const PDF = styled.a`
-
 `
