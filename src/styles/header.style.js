@@ -35,6 +35,7 @@ export const NavList = styled.div`
   > a:hover {
     color: ${ANCHOR_ACTIVE_COLOR};
   }
+  
 `;
 
 export const LoginBox = styled.div`

@@ -7,7 +7,7 @@ const ClassListPage = () => {
   const navigate = useNavigate();
 
   const onClickCard = () => {
-    navigate('/class/test');
+    navigate('/class/test/curriculum');
   }
 
   return (

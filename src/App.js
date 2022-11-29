@@ -17,7 +17,7 @@ function App() {
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/community" element={<Community />} />
           <Route path="/class" element={<P.ClassListPage />} />
-          <Route path="/class/:classId" element={<P.ClassMainPage /> } />
+          <Route path="/class/:classId/curriculum" element={<P.ClassCurriculumPage /> } />
           <Route path="/class/:classId/report" element={<P.ClassReportPage /> } />
         </Routes>
         <Footer />
