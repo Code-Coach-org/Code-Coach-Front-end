@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ANCHOR_ACTIVE_COLOR } from "./constants/color.constant";
+import { ANCHOR_ACTIVE_COLOR } from "../constants/color.constant";
 
 export const Frame = styled.div`
   width: 100%;

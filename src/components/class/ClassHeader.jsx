@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router";
 import { NavLink } from "react-router-dom";
-import * as S from '../../styles/class/classMain/classMain.style';
+import * as S from '../../styles/class/classCurriculum/classCurriculum.style';
 
 const ClassHeaderComponent = () => {
 

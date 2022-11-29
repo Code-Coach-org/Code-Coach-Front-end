@@ -1,20 +1,20 @@
 import React from "react";
 import ClassHeaderComponent from "../../../components/class/ClassHeader";
-import ClassReportWrapperComponent from "../../../components/class/ClassReportWrapper";
-import * as S from '../../../styles/class/classReport/classReport.style'
+import PostItemComponent from "../../../components/community/PostItem";
+import * as S from "../../../styles/community/communityBase.style";
 
-const ClassReportPage = () => {
+const ClassNoticePage = () => {
 
   return (
     <S.Layout>
       <ClassHeaderComponent />
       <S.Warpper>
         <S.TitleWarpper>
-          <S.Title>보고서</S.Title>
+          <S.Title>공지사항</S.Title>
           <S.Button>작성하기</S.Button>
         </S.TitleWarpper>
-        <S.Reports>
-          <S.ReportHeader>
+        <S.Posts>
+          <S.PostHeader>
             <div>
             </div>
             <div>
@@ -29,13 +29,13 @@ const ClassReportPage = () => {
             <div>
               조회
             </div>
-          </S.ReportHeader>
-          <ClassReportWrapperComponent />
-          <ClassReportWrapperComponent />
-        </S.Reports>
+          </S.PostHeader>
+          <PostItemComponent />
+          <PostItemComponent />
+        </S.Posts>
       </S.Warpper>
     </S.Layout>
   );
 };
 
-export default ClassReportPage;
+export default ClassNoticePage;

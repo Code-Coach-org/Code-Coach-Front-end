@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import * as S from '../../../styles/class/classList/classList.style';
+import * as S from "../../../styles/class/classList/classList.style";
 
 const ClassListPage = () => {
 

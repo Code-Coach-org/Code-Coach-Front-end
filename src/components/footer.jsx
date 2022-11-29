@@ -1,4 +1,4 @@
-import * as S from "../styles/footer.style";
+import * as S from "../styles/common/footer.style";
 
 export default function Footer() {
   return (

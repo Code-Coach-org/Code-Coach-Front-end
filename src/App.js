@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import Footer from "./components/footer.js";
-import Header from "./components/header.js";
-import MainPage from "./components/main.js";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import MainPage from "./components/main";
 import MyPage from "./pages/my/MyPage";
-import Community from "./pages/community.js";
+import Community from "./pages/community";
 import * as P from "./pages"
 
 function App() {
@@ -19,7 +19,9 @@ function App() {
           <Route path="/class" element={<P.ClassListPage />} />
           <Route path="/class/:classId/curriculum" element={<P.ClassCurriculumPage /> } />
           <Route path="/class/:classId/report" element={<P.ClassReportPage /> } />
-        </Routes>
+          <Route path="/class/:classId/notice" element={<P.ClassNoticePage /> } />
+          <Route path="/class/:classId/attendance" element={<P.ClassAttendancePage /> } />
+        </ Routes>
         <Footer />
       </BrowserRouter>
     </Layout>

@@ -1,6 +1,6 @@
 import React from "react";
 import ClassHeaderComponent from "../../../components/class/ClassHeader";
-import * as S from '../../../styles/class/classMain/classMain.style';
+import * as S from "../../../styles/class/classCurriculum/classCurriculum.style";
 
 const ClassCurriculumPage = () => {
 
