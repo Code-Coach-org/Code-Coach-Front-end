@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ANCHOR_ACTIVE_COLOR } from "../../constants/color.constant";
 
 export const Layout = styled.div`
   width: 100%;
@@ -11,8 +10,9 @@ export const Layout = styled.div`
 export const Warpper = styled.div`
   display: flex;
   width: 95%;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-around;
+  padding: 2rem 0;
 `
 
 export const Date = styled.div`
@@ -32,16 +32,19 @@ export const Time = styled.div`
 export const ButtonWarpper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 `
 
 export const Remaining = styled.div`
-  
+  font-size: 1.4rem;
+  font-weight: 500;
 `
 
 export const Button = styled.button`
   display: flex;
   height: 2rem;
-  width: 4rem;
+  width: 6rem;
   background-color: ${({btnClickable}) => (btnClickable ? '#77AEEF' : 'gray')};
   border: none;
   color: white;
