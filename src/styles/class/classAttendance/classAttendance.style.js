@@ -13,11 +13,17 @@ export const Warpper = styled.div`
   align-items: center;
   justify-content: space-around;
   padding: 2rem 0;
+  position: relative;
 `
 
 export const Date = styled.div`
   display: flex;
   flex-direction: column;
+`
+
+export const DateAbsolute = styled(Date)`
+  position: absolute;
+  left: 10%;
 `
 
 export const Today = styled.div`
@@ -27,6 +33,12 @@ export const Today = styled.div`
 export const Time = styled.div`
   font-size: 3rem;
   font-weight: 600;
+`
+
+export const Title = styled.div`
+  justify-self: center;
+  font-size: 2rem;
+  font-weight: 500;
 `
 
 export const ButtonWarpper = styled.div`
@@ -62,6 +74,7 @@ export const Schedule = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid black;
+  border-top: 2px solid black;
 `
 
 export const ScheduleRow = styled.div`
@@ -70,7 +83,7 @@ export const ScheduleRow = styled.div`
   grid-template-columns: 10fr 1fr 1fr 1fr 1fr;
   justify-items: center;
   padding: .5rem 0;
-  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   /* align-items: center; */
 `
 

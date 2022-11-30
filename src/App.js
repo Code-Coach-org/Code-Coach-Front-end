@@ -5,7 +5,7 @@ import Header from "./components/header";
 import MainPage from "./components/main";
 import MyPage from "./pages/my/MyPage";
 import Community from "./pages/community";
-import * as P from "./pages"
+import * as P from "./pages";
 
 function App() {
   return (

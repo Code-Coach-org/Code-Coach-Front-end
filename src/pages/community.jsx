@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 export const Community = () => {
-  const [category, setCategory] = React.useState([
+  const [category,] = React.useState([
     {
       title: "공지사항",
       content: ["홈페이지 이용 안내", "수업 공지", "모집 공지", "행사 공지"],
