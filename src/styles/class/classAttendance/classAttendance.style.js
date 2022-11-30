@@ -42,11 +42,13 @@ export const Button = styled.button`
   display: flex;
   height: 2rem;
   width: 4rem;
-  background-color: #77AEEF;
+  background-color: ${({btnClickable}) => (btnClickable ? '#77AEEF' : 'gray')};
   border: none;
   color: white;
   align-items: center;
   justify-content: center;
+  pointer-events : ${({btnClickable}) => (btnClickable ? 'auto' : 'none')};
+  cursor : ${({btnClickable}) => (btnClickable ? 'pointer' : 'none')};
   > svg {
     width: 1rem;
   }

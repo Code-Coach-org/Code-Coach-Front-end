@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import ReactCodeInput from "react-code-input";
 import ClassHeaderComponent from "../../../components/class/ClassHeader";
@@ -7,24 +7,36 @@ import * as S from "../../../styles/class/classAttendance/classAttendance.style"
 const ClassAttendancePage = () => {
 
     // TODO :: 남은 횟수 서버 저장 
-    const [isCodeValid, setCodeValid] = useState(10);
+    const [remaining, setRemaining] = useState(10);
     const [code, setCode] = useState("");
-    const [btnIsPressed, setBtnIsPressed] = useState(false);    
+    const [btnClickable, setBtnClickable] = useState(false);    
 
+    const CODE_LENGTH = 4;
     const CORRECT_PIN_CODE = "111111";
 
     const checkCode = () => {
         const isPinCodeValid = code === CORRECT_PIN_CODE;
-    
-        setBtnIsPressed(true);
-        setCodeValid(prev => prev-1);
-        if (!isPinCodeValid) setCode("");
+        if (!isPinCodeValid) {
+            setRemaining(prev => prev-1);
+            setCode("");
+        }
     };
 
     const handleCodeChange = Code => {
         setCode(Code);
-        setBtnIsPressed(false);
-      };
+    };
+
+    useEffect(() => {
+        if (code.length < CODE_LENGTH) {
+            setBtnClickable(false);
+        }
+        else if (remaining === 0) {
+            setBtnClickable(false);
+        }
+        else {
+            setBtnClickable(true);
+        }
+    }, [remaining, code])
 
     return (
         <S.Layout>
@@ -35,13 +47,16 @@ const ClassAttendancePage = () => {
                     <S.Time>03:20</S.Time>
                 </S.Date>
                 <ReactCodeInput
-                    fields={4}
+                    fields={CODE_LENGTH}
                     onChange={handleCodeChange}
                     value={code}
                 />
                 <S.ButtonWarpper>
-                    <S.Remaining>남은 횟수: 7</S.Remaining>
-                    <S.Button>
+                    <S.Remaining>남은 횟수: {remaining}</S.Remaining>
+                    <S.Button 
+                        onClick={checkCode}
+                        btnClickable={btnClickable}
+                    >
                         출석 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
