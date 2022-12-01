@@ -50,7 +50,8 @@ const ClassAttendancePage = () => {
                     fields={CODE_LENGTH}
                     onChange={handleCodeChange}
                     value={code}
-                />
+                    style={{"alignSelf": "center", "textAlign": "center"}}
+                    />
                 <S.ButtonWarpper>
                     <S.Remaining>남은 횟수: {remaining}</S.Remaining>
                     <S.Button 

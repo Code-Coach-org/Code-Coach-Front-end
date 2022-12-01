@@ -8,9 +8,9 @@ const ClassAttendanceCompletedPage = ({ title }) => {
         <S.Layout>
             <ClassHeaderComponent />
             <S.Warpper>
-                <S.DateAbsolute>
+                <S.Date>
                     2022-02-05
-                </S.DateAbsolute>
+                </S.Date>
                 <S.Title>
                     {title}
                 </S.Title>
