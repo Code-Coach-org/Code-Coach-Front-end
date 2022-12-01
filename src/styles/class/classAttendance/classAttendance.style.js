@@ -98,3 +98,9 @@ export const Result = styled.div`
 export const ResultItem = styled.div`
   margin: 0rem 2rem;
 `
+
+export const Input = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`

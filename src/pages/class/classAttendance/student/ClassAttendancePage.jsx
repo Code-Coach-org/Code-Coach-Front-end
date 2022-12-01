@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import ReactCodeInput from "react-code-input";
 import ClassHeaderComponent from "../../../../components/class/ClassHeader";
-import * as S from "../../../../styles/class/classAttendance/classAttendance.style"; 
+import * as S from "../../../../styles/class/classAttendance/classAttendance.style";
 
 const ClassAttendancePage = () => {
 
     // TODO :: 남은 횟수 서버 저장 
     const [remaining, setRemaining] = useState(10);
     const [code, setCode] = useState("");
-    const [btnClickable, setBtnClickable] = useState(false);    
+    const [btnClickable, setBtnClickable] = useState(false);
 
     const CODE_LENGTH = 4;
     const CORRECT_PIN_CODE = "111111";
@@ -17,7 +17,7 @@ const ClassAttendancePage = () => {
     const checkCode = () => {
         const isPinCodeValid = code === CORRECT_PIN_CODE;
         if (!isPinCodeValid) {
-            setRemaining(prev => prev-1);
+            setRemaining(prev => prev - 1);
             setCode("");
         }
     };
@@ -46,15 +46,16 @@ const ClassAttendancePage = () => {
                     <S.Today>2022-11-15</S.Today>
                     <S.Time>03:20</S.Time>
                 </S.Date>
-                <ReactCodeInput
-                    fields={CODE_LENGTH}
-                    onChange={handleCodeChange}
-                    value={code}
-                    style={{"alignSelf": "center", "textAlign": "center"}}
+                <S.Input>
+                    <ReactCodeInput
+                        fields={CODE_LENGTH}
+                        onChange={handleCodeChange}
+                        value={code}
                     />
+                </S.Input>
                 <S.ButtonWarpper>
                     <S.Remaining>남은 횟수: {remaining}</S.Remaining>
-                    <S.Button 
+                    <S.Button
                         onClick={checkCode}
                         btnClickable={btnClickable}
                     >
