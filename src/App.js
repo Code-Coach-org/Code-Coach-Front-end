@@ -20,7 +20,8 @@ function App() {
           <Route path="/class/:classId/curriculum" element={<P.ClassCurriculumPage /> } />
           <Route path="/class/:classId/report" element={<P.ClassReportPage /> } />
           <Route path="/class/:classId/notice" element={<P.ClassNoticePage /> } />
-          <Route path="/class/:classId/attendance" element={<P.ClassAttendancePage /> } />
+          {/* <Route path="/class/:classId/attendance" element={<P.ClassAttendanceCompletedPage title="지금은 출석 체크 중이 아닙니다." /> } /> */}
+          <Route path="/class/:classId/attendance" element={<P.InAttendancePage /> } />
         </ Routes>
         <Footer />
       </BrowserRouter>

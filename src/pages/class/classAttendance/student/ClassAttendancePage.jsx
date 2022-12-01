@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import ReactCodeInput from "react-code-input";
-import ClassHeaderComponent from "../../../components/class/ClassHeader";
-import * as S from "../../../styles/class/classAttendance/classAttendance.style"; 
+import ClassHeaderComponent from "../../../../components/class/ClassHeader";
+import * as S from "../../../../styles/class/classAttendance/classAttendance.style"; 
 
 const ClassAttendancePage = () => {
 

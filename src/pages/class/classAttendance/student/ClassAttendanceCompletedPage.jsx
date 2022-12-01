@@ -1,8 +1,8 @@
 import React from "react";
-import ClassHeaderComponent from "../../../components/class/ClassHeader";
-import * as S from "../../../styles/class/classAttendance/classAttendance.style"; 
+import ClassHeaderComponent from "../../../../components/class/ClassHeader";
+import * as S from "../../../../styles/class/classAttendance/classAttendance.style"; 
 
-const ClassAttendanceCompletedPage = () => {
+const ClassAttendanceCompletedPage = ({ title }) => {
 
     return (
         <S.Layout>
@@ -12,7 +12,7 @@ const ClassAttendanceCompletedPage = () => {
                     2022-02-05
                 </S.DateAbsolute>
                 <S.Title>
-                    출석체크 완료
+                    {title}
                 </S.Title>
             </S.Warpper>
             <S.Schedule>
