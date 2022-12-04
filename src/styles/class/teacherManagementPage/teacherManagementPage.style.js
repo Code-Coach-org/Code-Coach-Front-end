@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ANCHOR_ACTIVE_COLOR } from "../../constants/color.constant";
 
 export const Layout = styled.div`
   width: 100%;
@@ -73,4 +74,18 @@ export const Result = styled.div`
 
 export const ResultItem = styled.div`
   margin: 0rem 2rem;
+`
+
+export const Button = styled.div`
+  background-color: #77AEEF;
+  color: white;
+  padding: .2rem .5rem;
+`
+
+export const FlexWarpper = styled.div`
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  padding: 2rem 0;
+  align-items: center;
 `
