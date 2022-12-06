@@ -5,6 +5,7 @@ export const Layout = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
 `;
 
 export const Box = styled.div`
@@ -12,4 +13,8 @@ export const Box = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+`;
+
+export const Frame = styled.div`
+  width: 90%;
 `;

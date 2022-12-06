@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "../styles/news.style";
 
-export const News = () => {
+const News = () => {
   return (
     <S.NewsBox>
       <span>새로운 소식</span>
@@ -14,3 +14,5 @@ export const News = () => {
     </S.NewsBox>
   );
 };
+
+export default News;

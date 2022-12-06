@@ -1,9 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import Footer from "./components/footer.js";
-import Header from "./components/header.js";
-import MainPage from "./components/main.js";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import MainPage from "./components/main";
 import MyPage from "./pages/my/MyPage";
+import Community from "./pages/community";
+import * as P from "./pages";
 
 function App() {
   return (
@@ -13,7 +15,16 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/mypage" element={<MyPage />} />
-        </Routes>
+          <Route path="/community" element={<Community />} />
+          <Route path="/class" element={<P.ClassListPage />} />
+          <Route path="/class/:classId/curriculum" element={<P.ClassCurriculumPage /> } />
+          <Route path="/class/:classId/report" element={<P.ClassReportPage /> } />
+          <Route path="/class/:classId/notice" element={<P.ClassNoticePage /> } />
+          {/* <Route path="/class/:classId/attendance" element={<P.ClassAttendancePage /> } /> */}
+          {/* <Route path="/class/:classId/attendance" element={<P.ClassAttendanceCompletedPage title="지금은 출석 체크 중이 아닙니다." /> } /> */}
+          {/* <Route path="/class/:classId/attendance" element={<P.InAttendancePage /> } /> */}
+          <Route path="/class/:classId/attendance" element={<P.BeforeAttendancePage /> } />
+        </ Routes>
         <Footer />
       </BrowserRouter>
     </Layout>
@@ -22,10 +33,7 @@ function App() {
 
 const Layout = styled.div`
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  height: 100%;
 `;
 
 export default App;

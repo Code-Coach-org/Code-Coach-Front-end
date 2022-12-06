@@ -3,12 +3,12 @@ import styled from "styled-components";
 const maincolor = "#E9E9E9";
 
 export const FooterContainer = styled.div`
-  width: 80%;
+  position: fixed;
+  width: 100%;
   height: 70px;
   background-color: ${maincolor};
-  display: flex;
   justify-content: space-between;
-  bottom: 0px;
+  bottom: 0;
 `;
 
 export const FooterLeft = styled.div`
@@ -41,7 +41,6 @@ export const Contact = styled.p`
   display: inline-block;
   font-size: 20px;
   margin-top: 10px;
-  /* padding-bttom: 0; */
   padding-left: 30px;
 `;
 
