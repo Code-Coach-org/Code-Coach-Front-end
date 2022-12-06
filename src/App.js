@@ -6,11 +6,13 @@ import MainPage from "./components/main";
 import MyPage from "./pages/my/MyPage";
 import Community from "./pages/community";
 import * as P from "./pages";
+import TopHeader from "./components/topHeader";
 
 function App() {
   return (
     <Layout>
       <BrowserRouter>
+        <TopHeader />
         <Header />
         <Routes>
           <Route path="/" element={<MainPage />} />
@@ -25,6 +27,9 @@ function App() {
           {/* <Route path="/class/:classId/attendance" element={<P.InAttendancePage /> } /> */}
           {/* <Route path="/class/:classId/attendance" element={<P.BeforeAttendancePage /> } /> */}
           <Route path="/admin" element={<P.AdminMainPage />} />
+          <Route path="/admin/member" element={<P.AdminMainPage />} />
+          <Route path="/admin/community" element={<P.AdminMainPage />} />
+          <Route path="/admin/class" element={<P.AdminMainPage />} />
         </ Routes>
         <Footer />
       </BrowserRouter>
