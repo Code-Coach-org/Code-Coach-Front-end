@@ -19,7 +19,7 @@ function Header() {
           <NavLink to="/class">
             수업
           </NavLink>
-          <NavLink to="/none2">
+          <NavLink to="/admin">
             관리
           </NavLink>
         </S.NavList>
