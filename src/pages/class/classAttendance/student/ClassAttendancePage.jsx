@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { useState } from "react";
 import ReactCodeInput from "react-code-input";
 import ClassHeaderComponent from "../../../../components/class/ClassHeader";
 import * as S from "../../../../styles/class/classAttendance/classAttendance.style";
@@ -7,9 +6,9 @@ import * as S from "../../../../styles/class/classAttendance/classAttendance.sty
 const ClassAttendancePage = () => {
 
     // TODO :: 남은 횟수 서버 저장 
-    const [remaining, setRemaining] = useState(10);
-    const [code, setCode] = useState("");
-    const [btnClickable, setBtnClickable] = useState(false);
+    const [remaining, setRemaining] = React.useState(10);
+    const [code, setCode] = React.useState("");
+    const [btnClickable, setBtnClickable] = React.useState(false);
 
     const CODE_LENGTH = 4;
     const CORRECT_PIN_CODE = "111111";
