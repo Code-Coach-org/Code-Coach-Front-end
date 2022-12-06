@@ -44,3 +44,7 @@ export const Contact = styled.p`
   /* padding-bttom: 0; */
   padding-left: 30px;
 `;
+
+export const HeaderLinks = styled(Link)`
+  text-decoration: none;
+`;
