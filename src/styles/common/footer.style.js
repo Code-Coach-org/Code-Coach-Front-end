@@ -44,6 +44,6 @@ export const Contact = styled.p`
   padding-left: 30px;
 `;
 
-export const HeaderLinks = styled(Link)`
-  text-decoration: none;
-`;
+// export const HeaderLinks = styled(Link)`
+//   text-decoration: none;
+// `;
