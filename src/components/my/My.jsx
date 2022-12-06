@@ -30,27 +30,33 @@ const My = () => {
               <_.MyInfoTab>나의 질문</_.MyInfoTab>
               <_.MyInfoTab>내 글 관리</_.MyInfoTab>
             </_.MyCategory>
+
             <_.MyProfileWrap>
               <_.MyImgWrap>
                 <_.MyProfileText>프로필 : </_.MyProfileText>
                 <_.MyProfileImg></_.MyProfileImg>
               </_.MyImgWrap>
+
               <_.MyInfoTextWrap>
                 <_.MyText>이름 : </_.MyText>
                 <_.MyInput></_.MyInput>
               </_.MyInfoTextWrap>
+
               <_.MyInfoTextWrap>
                 <_.MyText>별명 : </_.MyText>
                 <_.MyInput></_.MyInput>
               </_.MyInfoTextWrap>
+
               <_.MyInfoTextWrap>
                 <_.MyText>이메일 : </_.MyText>
                 <_.MyEmailInfo>mijin.develop@gmail.com</_.MyEmailInfo>
               </_.MyInfoTextWrap>
+
               <_.MyInfoTextWrap>
                 <_.MyText>전화번호 : </_.MyText>
                 <_.MyInput></_.MyInput>
               </_.MyInfoTextWrap>
+
               <_.MyInfoBtntWrap>
                 <_.Complete>확인</_.Complete>
                 <_.PasswordChange>비밀번호 변경</_.PasswordChange>
@@ -59,11 +65,10 @@ const My = () => {
           </_.MyInfo>
         </_.MyContainer>
       ) : (
-        <div>login 후 이용해주세요...</div>
+        <div>로그인 후 이용해주세요</div>
       )}
     </>
   );
 };
 
 export default My;
-
