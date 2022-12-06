@@ -43,3 +43,7 @@ export const Contact = styled.p`
   margin-top: 10px;
   padding-left: 30px;
 `;
+
+export const HeaderLinks = styled(Link)`
+  text-decoration: none;
+`;
