@@ -7,3 +7,4 @@ export { default as ClassAttendanceCompletedPage } from './class/classAttendance
 export { default as InAttendancePage } from './class/classAttendance/teacher/InAttendancePage';
 export { default as BeforeAttendancePage } from './class/classAttendance/teacher/BeforeAttendancePage';
 export { default as AdminMainPage } from './admin/AdminMainPage';
+export { default as AdminMemberPage } from './admin/adminMember/AdminMemberPage';

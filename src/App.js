@@ -27,7 +27,7 @@ function App() {
           {/* <Route path="/class/:classId/attendance" element={<P.InAttendancePage /> } /> */}
           {/* <Route path="/class/:classId/attendance" element={<P.BeforeAttendancePage /> } /> */}
           <Route path="/admin" element={<P.AdminMainPage />} />
-          <Route path="/admin/member" element={<P.AdminMainPage />} />
+          <Route path="/admin/member" element={<P.AdminMemberPage />} />
           <Route path="/admin/community" element={<P.AdminMainPage />} />
           <Route path="/admin/class" element={<P.AdminMainPage />} />
         </ Routes>
