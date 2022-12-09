@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MAIN_COLOR } from "../../constants/color.constant";
+import { MAIN_COLOR } from "../constants/color.constant";
 
 export const Layout = styled.div`
   position: relative;
@@ -22,12 +22,13 @@ export const Side = styled.div`
   display: flex;
   flex-direction: column;
   width: 10rem;
+  background-color: ${MAIN_COLOR};
 `
 
 export const SideHeader = styled.div`
   display: flex;
   align-items: center;
-  border-bottom: 2px solid ${MAIN_COLOR};
+  /* border-bottom: 2px solid ${MAIN_COLOR}; */
   justify-content: space-between;
 `
 
@@ -82,6 +83,9 @@ export const MemberRow = styled.div`
 export const Item = styled.div`
   text-align: center;
   width: 100%;
+  > svg {
+    width: 1rem;
+  }
 `
 
 export const All = styled.div`
