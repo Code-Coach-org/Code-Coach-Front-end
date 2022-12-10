@@ -1,10 +1,10 @@
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState, useForm } from "react";
 
 import * as _ from "./MyStyle";
 const My = () => {
   const [isLogIn, setIsLogIn] = useState(false);
+  const { register, handleSubmit } = useForm();
 
   useEffect(() => {
     if (sessionStorage.getItem("user_id") === null) {
@@ -31,7 +31,7 @@ const My = () => {
               <_.MyInfoTab>내 글 관리</_.MyInfoTab>
             </_.MyCategory>
 
-            <_.MyProfileWrap>
+            <_.MyProfileWrap handleSubmit>
               <_.MyImgWrap>
                 <_.MyProfileText>프로필 : </_.MyProfileText>
                 <_.MyProfileImg></_.MyProfileImg>
