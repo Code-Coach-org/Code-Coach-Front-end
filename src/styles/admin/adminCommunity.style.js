@@ -9,7 +9,7 @@ export const Layout = styled.div`
   flex-direction: column;
 `
 
-export const Title = styled.div`
+export const TopTitle = styled.div`
   font-size: 2rem;
   width: 100%;
   margin: 2rem 0 0 6rem;
@@ -23,6 +23,7 @@ export const Side = styled.div`
   flex-direction: column;
   width: 10rem;
   background-color: ${MAIN_COLOR};
+  padding: 1rem;
 `
 
 export const SideHeader = styled.div`
@@ -95,4 +96,54 @@ export const All = styled.div`
 
 export const Add = styled.div`
   text-decoration: underline;
+`
+
+export const Title = styled.div`
+  font-size: 1.5rem;
+  font-weight: 550;
+`
+
+export const Auths = styled.div`
+  display: flex;   
+  gap: 1rem;
+  padding: 1rem 0;
+`
+
+export const Auth = styled.div`
+  font-size: .9rem;
+`
+
+export const Search = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 2rem;
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+  padding: .5rem 0;
+`
+
+export const Label = styled.div`
+  font-size: .8rem;
+
+`
+
+export const Input = styled.input`
+  width: 50%;
+`
+
+export const Button = styled.div`
+  font-size: .8rem;
+`
+
+export const Users = styled.div`
+  
+`
+
+export const Admin = styled.div`
+  color: gray;
+`
+
+export const User = styled.div`
+
 `
