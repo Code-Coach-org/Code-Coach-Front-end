@@ -55,11 +55,13 @@ export const MyProfileWrap = styled.div`
 export const MyImgWrap = styled.div`
   width: 100%;
   height: 38%;
+  /* margin-top: 20px; */
   /* display: flex; */
   /* background-color: ; */
 `;
 
 export const MyProfileText = styled.p`
+  margin-top: 30px;
   font-size: 20px;
   margin-bottom: 0;
 `;
@@ -81,6 +83,7 @@ export const MyInfoTextWrap = styled.div`
 `;
 
 export const MyText = styled.div`
+  width: 100px;
   padding-top: 15px;
 `;
 
@@ -139,4 +142,73 @@ export const Complete = styled.button`
   border: none;
   color: #fff;
   background-color: #77b5ef;
+`;
+
+export const ModalBackdrop = styled.div`
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  flex-flow: row wrep;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+`;
+
+
+export const ModalContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrep;
+  justify-content: center;
+  align-items: center;
+`;
+
+
+
+export const LogoWrap = styled.div`
+  padding-left: 370px;
+  .logo {
+    cursor: pointer;
+  }
+`;
+
+export const PasswordWrap = styled.div`
+  display: flex;
+  width: 350px;
+  height: 50px;
+  border-bottom: 2px solid #78B5EF;
+  margin: 45px 30px 0;
+`;
+
+export const PasswordText = styled.div`
+  width: 100px;
+  height: 60%;
+  padding-top: 20px;
+  font-weight: 700;
+`;
+
+export const NewPasswordInput = styled.input`
+  width: 250px;
+  margin-top: 17px;
+  height: 20px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  &:focus{
+    outline: none;
+  }
+`;
+
+export const ModalView = styled.div.attrs(props => ({
+  role: 'dialog'
+}))`
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  padding: 16px;
+  color: #333;
 `;
