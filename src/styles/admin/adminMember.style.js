@@ -66,8 +66,8 @@ export const Header = styled.div`
 export const Member = styled.div`
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid black;
   border-top: 2px solid black;
+  margin-top: 1rem;
 `
 
 export const MemberRow = styled.div`
@@ -94,4 +94,5 @@ export const All = styled.div`
 
 export const Add = styled.div`
   text-decoration: underline;
+  cursor: pointer;
 `

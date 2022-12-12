@@ -1,6 +1,16 @@
 import React from "react";
+import BaseModalComponent from "../../../components/common/BaseModalComponent";
 import * as S from "../../../styles/admin/adminMember.style";
+import * as M from "../../../styles/common/modal.style";
+import Modal from "react-modal";
 const AdminMemberPage = () => {
+    
+    const [groupModalIsOpen, setGroupModalIsOpen] = React.useState(false);
+    const [userModalIsOpen, setUserModalIsOpen] = React.useState(false);
+    const openGroupModal = () => setGroupModalIsOpen(true);
+    const closeGroupModal = () => setGroupModalIsOpen(false);
+    const openUserModal = () => setUserModalIsOpen(true);
+    const closeUserModal = () => setUserModalIsOpen(false);
 
     return (
         <S.Layout>
@@ -8,11 +18,18 @@ const AdminMemberPage = () => {
             <S.Side>
                 <S.SideHeader>
                     <S.SideTitle>그룹별 보기</S.SideTitle>
-                    <S.SideIcon>
+                    <S.SideIcon onClick={openGroupModal}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                         </svg>
                     </S.SideIcon>
+                    <Modal
+                        isOpen={groupModalIsOpen}
+                        onRequestClose={closeGroupModal}
+                        style={M.ModalStyle}
+                    >
+                        <BaseModalComponent closeModal={closeGroupModal} title={"그룹 이름"}/>
+                    </Modal>
                 </S.SideHeader>
                 <S.SideContents>
                     <S.SideContent>전체</S.SideContent>
@@ -23,7 +40,14 @@ const AdminMemberPage = () => {
             <S.Warpper>
                 <S.Header>
                     <S.All>전체</S.All>
-                    <S.Add>추가하기</S.Add>
+                    <S.Add onClick={openUserModal}>추가하기</S.Add>
+                    <Modal
+                        isOpen={userModalIsOpen}
+                        onRequestClose={closeUserModal}
+                        style={M.ModalStyle}
+                    >
+                        <BaseModalComponent closeModal={closeUserModal} title={"유저 이메일"}/>
+                    </Modal>
                 </S.Header>
                 <S.Member>
                     <S.MemberRow>
@@ -40,6 +64,18 @@ const AdminMemberPage = () => {
                         <S.Item></S.Item>
                         <S.Item>sample@sam.ple</S.Item>
                         <S.Item>20xx.xx.xx</S.Item>
+                        <S.Item>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </S.Item>
+                    </S.MemberRow>
+                    <S.MemberRow>
+                        <S.Item>002</S.Item>
+                        <S.Item>김소희</S.Item>
+                        <S.Item></S.Item>
+                        <S.Item></S.Item>
+                        <S.Item></S.Item>
                         <S.Item>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />

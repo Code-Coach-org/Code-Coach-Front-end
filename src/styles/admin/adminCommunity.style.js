@@ -29,8 +29,9 @@ export const Side = styled.div`
 export const SideHeader = styled.div`
   display: flex;
   align-items: center;
-  /* border-bottom: 2px solid ${MAIN_COLOR}; */
   justify-content: space-between;
+  width: 100%;
+  border-bottom: 2px solid #DBDBDB;
 `
 
 export const SideTitle = styled.div`
@@ -125,7 +126,6 @@ export const Search = styled.div`
 
 export const Label = styled.div`
   font-size: .8rem;
-
 `
 
 export const Input = styled.input`
@@ -142,8 +142,20 @@ export const Users = styled.div`
 
 export const Admin = styled.div`
   color: gray;
+  font-size: 1.3rem;
+  padding: .5rem;
+`
+
+export const UserName = styled.div`
+  
 `
 
 export const User = styled.div`
-
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  padding: .5rem;
+  > svg {
+    width: 1.5rem;
+  }
 `
