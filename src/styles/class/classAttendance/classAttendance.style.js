@@ -88,6 +88,7 @@ export const Item = styled.div`
   text-align: center;
   width: 100%;
 `
+
 export const Result = styled.div`
   width: 95%;
   display: flex;

@@ -50,3 +50,7 @@ export const Btn = styled.button`
   padding: 10px;
   cursor: pointer;
 `;
+
+export const Logo = styled.div`
+  
+`;

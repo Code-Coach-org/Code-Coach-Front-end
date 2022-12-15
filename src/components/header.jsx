@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "../styles/common/header.style";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -19,12 +19,14 @@ function Header() {
           <NavLink to="/class">
             수업
           </NavLink>
-          <NavLink to="/none2">
+          <NavLink to="/admin">
             관리
           </NavLink>
         </S.NavList>
         <S.LoginBox>
-          <S.Btn onClick={() => alert("조용제는 바보다")}>마이페이지</S.Btn>
+          <S.Btn>
+            <Link to="/mypage">마이페이지</Link>
+          </S.Btn>
           <S.Btn>로그아웃</S.Btn>
         </S.LoginBox>
       </S.HeaderBox>
