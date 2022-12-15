@@ -7,6 +7,7 @@ import MyPage from "./pages/my/MyPage";
 import Community from "./pages/community";
 import * as P from "./pages";
 import TopHeader from "./components/topHeader";
+import CommunityIn from "./pages/board";
 
 function App() {
   return (
@@ -17,12 +18,24 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/mypage" element={<MyPage />} />
-          <Route path="/community" element={<Community />} />
+          <Route path="/community/:co_id" element={<Community />} />
           <Route path="/class" element={<P.ClassListPage />} />
-          <Route path="/class/:classId/curriculum" element={<P.ClassCurriculumPage /> } />
-          <Route path="/class/:classId/report" element={<P.ClassReportPage /> } />
-          <Route path="/class/:classId/notice" element={<P.ClassNoticePage /> } />
-          <Route path="/class/:classId/attendance" element={<P.ClassAttendancePage /> } />
+          <Route
+            path="/class/:classId/curriculum"
+            element={<P.ClassCurriculumPage />}
+          />
+          <Route
+            path="/class/:classId/report"
+            element={<P.ClassReportPage />}
+          />
+          <Route
+            path="/class/:classId/notice"
+            element={<P.ClassNoticePage />}
+          />
+          <Route
+            path="/class/:classId/attendance"
+            element={<P.ClassAttendancePage />}
+          />
           {/* <Route path="/class/:classId/attendance" element={<P.ClassAttendanceCompletedPage title="지금은 출석 체크 중이 아닙니다." /> } /> */}
           {/* <Route path="/class/:classId/attendance" element={<P.InAttendancePage /> } /> */}
           {/* <Route path="/class/:classId/attendance" element={<P.BeforeAttendancePage /> } /> */}
@@ -30,7 +43,7 @@ function App() {
           <Route path="/admin/member" element={<P.AdminMemberPage />} />
           <Route path="/admin/community" element={<P.AdminCommunityPage />} />
           <Route path="/admin/class" element={<P.AdminMainPage />} />
-        </ Routes>
+        </Routes>
         <Footer />
       </BrowserRouter>
     </Layout>
