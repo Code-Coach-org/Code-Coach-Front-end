@@ -7,6 +7,7 @@ import MyPage from "./pages/my/MyPage";
 import Community from "./pages/community";
 import * as P from "./pages";
 import TopHeader from "./components/topHeader";
+import { Signup } from "./components/signup/Signup";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<MainPage />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/community" element={<Community />} />
           <Route path="/class" element={<P.ClassListPage />} />
