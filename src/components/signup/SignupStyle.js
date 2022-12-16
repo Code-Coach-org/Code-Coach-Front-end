@@ -39,7 +39,7 @@ export const SignupSubText = styled.div`
     color: #78B5EF;
 `;
 
-export const EmailWrap = styled.div`
+export const InfoWrap = styled.div`
     width: 85%;
     height: 150px;
     margin-left: 40px;
@@ -76,6 +76,7 @@ export const AuthBtn = styled.button`
     color: #fff;
     font-size: 14px;
     font-weight: 700;
+    cursor: pointer;
 `;
 
 export const AuthCodeNumber = styled.input`
@@ -85,6 +86,28 @@ export const AuthCodeNumber = styled.input`
     padding: 6px;
 `;
 
-export const PasswordWrap = styled.div`
-    
+export const PasswordInput = styled.input`
+    width: 510px;
+    height: 8px;
+    margin-top: 4px;
+    padding: 8px;
 `;
+
+export const InfoBtnWrap = styled.div`
+    width: 30%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+`;
+
+export const SignupBtn = styled.button`
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 8px;
+  width: 80px;
+  height: 35px;
+  border: none;
+  color: #fff;
+  background-color: #77b5ef;
+`

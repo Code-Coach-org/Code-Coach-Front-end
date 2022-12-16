@@ -1,5 +1,6 @@
 import React from "react";
 import * as _ from "./SignupStyle"
+import * as M from "../my/MyStyle"
 import { useState } from "react";
 
 export const Signup = () => {
@@ -21,7 +22,7 @@ export const Signup = () => {
                     </_.SignupSubText>
                 </_.SignupTitleWrap>
 
-                <_.EmailWrap>
+                <_.InfoWrap>
                     <_.EmailInputWrap>
                         <_.EmailTitle>이메일</_.EmailTitle>
                         <_.EmailInput/>
@@ -35,12 +36,37 @@ export const Signup = () => {
                     </_.EmailInputWrap>
                     <_.EmailInputWrap>
                         <_.EmailTitle>이메일 인증</_.EmailTitle>
-                        <_.AuthBtn>인증</_.AuthBtn>
+                        <_.AuthBtn onClick={() => console.log('clicked')}>인증</_.AuthBtn>
                         <_.AuthCodeNumber/>
                     </_.EmailInputWrap>
-                </_.EmailWrap>
-
+                </_.InfoWrap>
                 
+                <_.InfoWrap>
+                    <_.EmailInputWrap>
+                        <_.EmailTitle>비밀번호</_.EmailTitle>
+                        <_.PasswordInput/>
+                        <_.EmailTitle>비밀번호 확인</_.EmailTitle>
+                        <_.PasswordInput/>
+                    </_.EmailInputWrap>
+                </_.InfoWrap>
+                
+                <_.InfoWrap>
+                    <_.EmailInputWrap>
+                        <_.EmailTitle>이름</_.EmailTitle>
+                        <_.PasswordInput/>
+                        <_.EmailTitle>전화번호</_.EmailTitle>
+                        <_.PasswordInput/>
+                    </_.EmailInputWrap>
+                </_.InfoWrap>
+                
+                <_.InfoBtnWrap>
+                    <_.SignupBtn>
+                    회원가입
+                    </_.SignupBtn>  
+                    <M.PasswordChange>
+                    가입 취소
+                    </M.PasswordChange>
+              </_.InfoBtnWrap>
             </_.SignupContainer>
         </_.BackDrop>
         </>
