@@ -1,9 +1,13 @@
 import React from "react";
 import * as S from "../styles/common/header.style";
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 
 function Header() {
+  const [isLogin, setIsLogin] = useState(false)
+
   return (
+    <>
     <S.Frame>
       <S.HeaderBox>
         <S.NavList>
@@ -27,10 +31,14 @@ function Header() {
           <S.Btn>
             <Link to="/mypage">마이페이지</Link>
           </S.Btn>
-          <S.Btn>로그아웃</S.Btn>
+          {
+            isLogin ? <S.Btn>로그아웃</S.Btn> : <S.Btn>로그인</S.Btn>
+          }
         </S.LoginBox>
       </S.HeaderBox>
     </S.Frame>
+     
+    </>
   );
 }
 

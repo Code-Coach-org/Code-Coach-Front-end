@@ -7,6 +7,7 @@ import MyPage from "./pages/my/MyPage";
 import Community from "./pages/community";
 import * as P from "./pages";
 import TopHeader from "./components/topHeader";
+import { LoginModal } from "./components/login/Login";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<MainPage />} />
+          {/* 임시로 설정해 둔 로그인 링크 */}
+          <Route path="/login" element={<LoginModal />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/community" element={<Community />} />
           <Route path="/class" element={<P.ClassListPage />} />
