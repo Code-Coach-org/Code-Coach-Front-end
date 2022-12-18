@@ -14,18 +14,10 @@ function Header() {
           <NavLink end to="">
             메인
           </NavLink>
-          <NavLink to="/none">
-            모집
-          </NavLink>
-          <NavLink to="/community">
-            커뮤니티
-          </NavLink>
-          <NavLink to="/class">
-            수업
-          </NavLink>
-          <NavLink to="/admin">
-            관리
-          </NavLink>
+          <NavLink to="/none">모집</NavLink>
+          <NavLink to="/community/guide">커뮤니티</NavLink>
+          <NavLink to="/class">수업</NavLink>
+          <NavLink to="/admin">관리</NavLink>
         </S.NavList>
         <S.LoginBox>
           <S.Btn>
