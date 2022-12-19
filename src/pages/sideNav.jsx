@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
@@ -12,6 +13,8 @@ const Aside = styled.aside`
 `;
 
 export const SideNav = () => {
+  
+
   return (
     <Aside>
       <h4>공지사항</h4>

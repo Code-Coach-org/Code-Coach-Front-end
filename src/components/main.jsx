@@ -3,7 +3,8 @@ import * as S from "../styles/main.style";
 import News from "./news";
 import Slick from "./slick";
 
-export default function mainpage() {
+export default function Mainpage () {
+
   return (
     <S.Layout>
       <S.Frame>

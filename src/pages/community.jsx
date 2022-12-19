@@ -3,9 +3,17 @@ import styled from "styled-components";
 import { SideNav } from "./sideNav";
 import { useParams } from "react-router";
 import Board from "./board";
+import { useEffect } from "react";
 
 export const Community = () => {
   const { co_id } = useParams();
+
+  useEffect(() => {
+    const getAllBoards = async () => {
+      
+    }
+    getAllBoards();
+  }, [])
 
   return (
     <Frame>

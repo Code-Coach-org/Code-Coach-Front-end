@@ -11,13 +11,9 @@ import rootReducer from './redux';
 import { legacy_createStore as createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { Signup } from "./components/signup/Signup";
-
-
+const store = createStore(rootReducer);
 
 function App() {
-
-  const store = createStore(rootReducer);
-
   return (
     <Provider store={store}>
       <Layout>

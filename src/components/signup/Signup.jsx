@@ -10,6 +10,7 @@ export const Signup = () => {
 
     const selectList = ["직접입력", "@gmail.com", "@naver.com", "@hanmail.com"];
     const [selected, setSelected] = useState("");
+    const [onMailLoading, setOnMailLoading] = useState(false);
     const { register, getValues, handleSubmit, formState: { isSubmitting, errors } } = useForm();
     const navigate = useNavigate();
 
@@ -18,8 +19,10 @@ export const Signup = () => {
     };
 
     const onEmailVarify = async () => {
+        setOnMailLoading(true);
         const { email } = getValues();
-        await instance.get(`/api/users/send-email?email=${email+selected}`);
+        await instance.get(`/api/users/send-email?email=${email + selected}`);
+        setOnMailLoading(false);
         alert('이메일 인증 메일 전송이 완료되었습니다.');
     };
 
@@ -35,7 +38,7 @@ export const Signup = () => {
             userName: data.name,
             phone: data.phone
         }));
-        navigate('/');
+        navigate('/?signup=true');
     }
 
     return (
@@ -65,7 +68,12 @@ export const Signup = () => {
                         </_.EmailInputWrap>
                         <_.EmailInputWrap>
                             <_.EmailTitle>이메일 인증</_.EmailTitle>
-                            <_.AuthBtn type="button" onClick={() => onEmailVarify()}>인증</_.AuthBtn>
+                            <_.AuthBtn
+                                type="button"
+                                onClick={() => onEmailVarify()}
+                                disabled={onMailLoading}>
+                                {onMailLoading? "보내는 중": "인증"}
+                            </_.AuthBtn>
                             <_.AuthCodeNumber {...register("authCode")} />
                         </_.EmailInputWrap>
                     </_.InfoWrap>
@@ -101,12 +109,12 @@ export const Signup = () => {
                             {errors.phone && <small role="alert">{errors.phone.message}</small>}
                             <_.PasswordInput {...register("phone", {
                                 required: "전화번호는 필수 입력 사항입니다."
-                            })}/>
+                            })} />
                         </_.EmailInputWrap>
                     </_.InfoWrap>
                     <_.InfoBtnWrap>
                         <_.SignupBtn type="submit" disabled={isSubmitting}>
-                            {isSubmitting? "가입 중" : "회원가입" }
+                            {isSubmitting ? "가입 중" : "회원가입"}
                         </_.SignupBtn>
                         <M.PasswordChange type="button" onClick={() => navigate('/')}>
                             가입 취소
