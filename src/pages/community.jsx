@@ -4,13 +4,16 @@ import { SideNav } from "./sideNav";
 import { useParams } from "react-router";
 import Board from "./board";
 import { useEffect } from "react";
+import { useState } from "react";
+import instanceWithToken from "../components/api/axiosWithToken.instance";
 
 export const Community = () => {
   const { co_id } = useParams();
-
+  const [boards, setBoards] = useState();
   useEffect(() => {
     const getAllBoards = async () => {
-      
+      const boards = await instanceWithToken.get('api/board/all');
+      console.log(boards);
     }
     getAllBoards();
   }, [])

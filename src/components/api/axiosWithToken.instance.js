@@ -21,9 +21,21 @@ instanceWithToken.interceptors.request.use(
 );
 
 instanceWithToken.interceptors.response.use((response) => {
+    if (response === undefined) return {
+        status: 400,
+        data: "Axios 통신 에러"
+    };
+    if (!response.data.status) return {
+        status: 200,
+        data: response.data
+    };
+    if (response.data.status === 500) return {
+        status: 500,
+        data: response.data.message
+    };
 },
-error => {
-    return Promise.reject(error);
-});
+    error => {
+        return Promise.reject(error);
+    });
 
 export default instanceWithToken; 

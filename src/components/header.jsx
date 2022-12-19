@@ -16,7 +16,6 @@ function Header() {
   const isAuthenticated = useSelector((state) => state.userReducer.isAuthenticated);
 
   useEffect(() => {
-    console.log(isAuthenticated);
     if (param.signup === "true") {
       openModal();
     }

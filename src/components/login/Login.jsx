@@ -12,6 +12,7 @@ const LoginModal = ({
     const { register, handleSubmit, formState: { isSubmitting, errors } } = useForm();
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    
     const onLogin = (token) => {
         dispatch(loginSuccess(token));
     }
@@ -20,10 +21,12 @@ const LoginModal = ({
         const response = await instance.post('/api/users/login', JSON.stringify({
             ...data
         }));
+        console.log(response);
         if (!response.data.success) {
             alert("로그인에 실패하였습니다. 아이디와 비밀번호를 다시 확인해주세요");
             return;
         }
+        console.log(response)
         onLogin(response.data.token);
         alert("로그인이 완료되었습니다.");
         closeModal();
