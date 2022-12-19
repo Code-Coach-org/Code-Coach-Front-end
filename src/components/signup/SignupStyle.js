@@ -11,7 +11,7 @@ width: 100%;
   background: rgba(0, 0, 0, 0.5);
 `;
 
-export const SignupContainer = styled.div`
+export const SignupContainer = styled.form`
     width: 700px;
     height: 1000px;
     background-color: #fff;
