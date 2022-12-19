@@ -18,7 +18,7 @@ export const SideNav = ({ boards }) => {
     <Aside>
       <h4>게시판</h4>
       <hr />
-      {boards.map((board) => {
+      {boards?.map((board) => {
         return (
           <NavLink to={`/community/${board.boardId}`} key={board.boardId}>
             <span>{board.name}</span>
