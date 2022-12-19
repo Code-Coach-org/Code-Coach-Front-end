@@ -12,39 +12,19 @@ const Aside = styled.aside`
   row-gap: 5px;
 `;
 
-export const SideNav = () => {
-  
+export const SideNav = ({ boards }) => {
 
   return (
     <Aside>
-      <h4>공지사항</h4>
-      <hr />
-      <NavLink to="/community/guide">
-        <span>홈페이지 이용 안내</span>
-      </NavLink>
-      <NavLink to="/community/lesson">
-        <span>수업 공지</span>
-      </NavLink>
-      <NavLink to="/community/recruit">
-        <span>모집 공지</span>
-      </NavLink>
-      <NavLink to="/community/event">
-        <span>행사 공지</span>
-      </NavLink>
       <h4>게시판</h4>
       <hr />
-      <NavLink to="/community/boardA">
-        <span>A 게시판</span>
-      </NavLink>
-      <NavLink to="/community/boardB">
-        <span>B 게시판</span>
-      </NavLink>
-      <NavLink to="/community/boardC">
-        <span>C 게시판</span>
-      </NavLink>
-      <NavLink to="/community/boardD">
-        <span>D 게시판</span>
-      </NavLink>
+      {boards.map((board) => {
+        return (
+          <NavLink to={`/community/${board.boardId}`} key={board.boardId}>
+            <span>{board.name}</span>
+          </NavLink>
+        )
+      })}
       <h4>Q&A</h4>
       <hr />
       <span>학생 질문</span>

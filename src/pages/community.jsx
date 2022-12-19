@@ -13,14 +13,14 @@ export const Community = () => {
   useEffect(() => {
     const getAllBoards = async () => {
       const boards = await instanceWithToken.get('api/board/all');
-      console.log(boards);
+      setBoards(boards.data);
     }
     getAllBoards();
   }, [])
 
   return (
     <Frame>
-      <SideNav />
+      <SideNav boards={boards}/>
       <Board subject={co_id} />
     </Frame>
   );

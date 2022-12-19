@@ -24,6 +24,7 @@ function App() {
             <Route path="/" element={<MainPage />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/mypage" element={<MyPage />} />
+            <Route path="/community/" element={<Community />} />
             <Route path="/community/:co_id" element={<Community />} />
             <Route path="/class" element={<P.ClassListPage />} />
             <Route
