@@ -1,53 +1,38 @@
 import React from "react";
 import styled from "styled-components";
 import * as S from "../styles/community/community.style";
-import * as M from "../styles/common/modal.style";
-import Modal from "react-modal";
-import BaseModalComponent from "../components/common/BaseModalComponent";
+import { useNavigate } from "react-router";
 
-export const Board = ({ subject }) => {
-  const [userModalIsOpen, setUserModalIsOpen] = React.useState(false);
-  const openUserModal = () => setUserModalIsOpen(true);
-  const closeUserModal = () => setUserModalIsOpen(false);
+export const Board = ({ subject, articles }) => {
+
+  const navigate = useNavigate();
+
   return <S.Warpper>
-  <S.Header>
-    <S.All>B 게시판</S.All>
-    <S.Add onClick={openUserModal}>작성하기</S.Add>
-    <Modal
-      isOpen={userModalIsOpen}
-      onRequestClose={closeUserModal}
-      style={M.ModalStyle}
-    >
-      <BaseModalComponent
-        closeModal={closeUserModal}
-        title={"유저 이메일"}
-      />
-    </Modal>
-  </S.Header>
-  <S.Member>
-    <S.MemberRow>
-      <S.Item></S.Item>
-      <S.Item>제목</S.Item>
-      <S.Item>작성일</S.Item>
-      <S.Item>작성자</S.Item>
-      <S.Item>조회</S.Item>
-    </S.MemberRow>
-    <S.MemberRow>
-      <S.Item>335</S.Item>
-      <S.Item>이 문제 어떻게 해결하나요?</S.Item>
-      <S.Item>20xx.xx.xx</S.Item>
-      <S.Item>홍길동</S.Item>
-      <S.Item>15</S.Item>
-    </S.MemberRow>
-    <S.MemberRow>
-      <S.Item>354</S.Item>
-      <S.Item>이 문제 어떻게 해결하나요?</S.Item>
-      <S.Item>20xx.xx.xx</S.Item>
-      <S.Item>김영민</S.Item>
-      <S.Item>12</S.Item>
-    </S.MemberRow>
-  </S.Member>
-</S.Warpper>
+    <S.Header>
+      <S.All>B 게시판</S.All>
+      {subject && <S.Add onClick={() => navigate('write')}>작성하기</S.Add>}
+    </S.Header>
+    <S.Member>
+      <S.MemberRow>
+        <S.Item></S.Item>
+        <S.Item>제목</S.Item>
+        <S.Item>작성일</S.Item>
+        <S.Item>작성자</S.Item>
+        <S.Item>조회</S.Item>
+      </S.MemberRow>
+      {articles?.map((article) => {
+        return (
+          <S.MemberRow>
+            <S.Item>{article.id}</S.Item>
+            <S.Item>{article.title}</S.Item>
+            <S.Item>{article.createdAt.slice(0, 10)}</S.Item>
+            <S.Item>{article.user.userName}</S.Item>
+            <S.Item>{article.view}</S.Item>
+          </S.MemberRow>
+        )
+      })}
+    </S.Member>
+  </S.Warpper>
 };
 
 export default Board;

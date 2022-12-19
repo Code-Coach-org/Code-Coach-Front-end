@@ -52,7 +52,7 @@ export const SideContent = styled.div`
   padding: 0.2rem 0 0.2rem 0;
 `;
 
-export const Warpper = styled.div`
+export const Warpper = styled.form`
   margin-left: 4rem;
   width: 80%;
 `;

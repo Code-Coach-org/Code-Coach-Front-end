@@ -2,37 +2,31 @@ import React from "react";
 import styled from "styled-components";
 import { SideNav } from "./sideNav";
 import { useParams } from "react-router";
-import Board from "./board";
 import { useEffect } from "react";
 import { useState } from "react";
 import instanceWithToken from "../components/api/axiosWithToken.instance";
+import WriteArticle from "./writeArticle";
 
-export const Community = () => {
+export const WriteCommunity = () => {
   const { co_id } = useParams();
   const [boards, setBoards] = useState();
-  const [articles, setArticles] = useState();
   useEffect(() => {
     const getAllBoards = async () => {
       const boards = await instanceWithToken.get('api/board/all');
       setBoards(boards.data);
     }
-    const getAllArticles = async () => {
-      const articles = await instanceWithToken.get(`api/board/article/${co_id}/all`);
-      setArticles(articles.data);
-    }
     getAllBoards();
-    getAllArticles();
   }, [co_id])
 
   return (
     <Frame>
       <SideNav boards={boards} />
-      <Board subject={co_id} articles={articles} />
+      <WriteArticle subject={co_id} />
     </Frame>
   );
 };
 
-export default Community;
+export default WriteCommunity;
 
 const Frame = styled.div`
   display: flex;

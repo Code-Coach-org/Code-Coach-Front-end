@@ -11,6 +11,7 @@ import rootReducer from './redux';
 import { legacy_createStore as createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { Signup } from "./components/signup/Signup";
+import WriteCommunity from "./pages/writeCommunity";
 const store = createStore(rootReducer);
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/mypage" element={<MyPage />} />
             <Route path="/community/" element={<Community />} />
             <Route path="/community/:co_id" element={<Community />} />
+            <Route path="/community/:co_id/write" element={<WriteCommunity />} />
             <Route path="/class" element={<P.ClassListPage />} />
             <Route
               path="/class/:classId/curriculum"

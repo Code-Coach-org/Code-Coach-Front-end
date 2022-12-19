@@ -20,9 +20,9 @@ function Header() {
       openModal();
     }
   }, [param.signup])
-  
+
   useCheckToken();
-  
+
   const dispatch = useDispatch();
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
   const openModal = () => setModalIsOpen(true);
@@ -44,6 +44,7 @@ function Header() {
           <NavLink to="/class">수업</NavLink>
           <NavLink to="/admin">관리</NavLink>
         </S.NavList>
+
         {isAuthenticated ?
           <S.LoginBox>
             <S.Btn>
