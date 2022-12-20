@@ -3,13 +3,13 @@ import styled from "styled-components";
 import * as S from "../styles/community/community.style";
 import { useNavigate } from "react-router";
 
-export const Board = ({ subject, articles }) => {
+export const Board = ({ subject, boards, articles }) => {
 
   const navigate = useNavigate();
 
   return <S.Warpper>
     <S.Header>
-      <S.All>B 게시판</S.All>
+      <S.All>{boards?.filter((board) => board.boardId == subject)?.[0]?.name} 게시판</S.All>
       {subject && <S.Add onClick={() => navigate('write')}>작성하기</S.Add>}
     </S.Header>
     <S.Member>
@@ -22,7 +22,7 @@ export const Board = ({ subject, articles }) => {
       </S.MemberRow>
       {articles?.map((article) => {
         return (
-          <S.MemberRow>
+          <S.MemberRow onClick={() => navigate(`${article.id}`)}>
             <S.Item>{article.id}</S.Item>
             <S.Item>{article.title}</S.Item>
             <S.Item>{article.createdAt.slice(0, 10)}</S.Item>

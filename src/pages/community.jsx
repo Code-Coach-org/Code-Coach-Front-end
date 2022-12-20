@@ -27,7 +27,7 @@ export const Community = () => {
   return (
     <Frame>
       <SideNav boards={boards} />
-      <Board subject={co_id} articles={articles} />
+      <Board subject={co_id} boards={boards} articles={articles} />
     </Frame>
   );
 };
@@ -41,4 +41,5 @@ const Frame = styled.div`
   column-gap: 10px;
   width: 90%;
   height: 100%;
+  min-height: 40rem;
 `;

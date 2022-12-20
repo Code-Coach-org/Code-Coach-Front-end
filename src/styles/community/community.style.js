@@ -71,6 +71,7 @@ export const Member = styled.div`
 `;
 
 export const MemberRow = styled.div`
+  cursor: pointer;
   width: 100%;
   display: grid;
   grid-template-columns: 0.4fr 3fr 1.2fr 1fr 1fr;
@@ -90,9 +91,34 @@ export const Item = styled.div`
 export const All = styled.div`
   font-weight: 600;
   font-size: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 `;
+
+export const Label = styled.div`
+  font-weight: 600;
+  font-size: 2rem;
+`;
+
 
 export const Add = styled.div`
   text-decoration: underline;
   cursor: pointer;
+`;
+
+export const Submit = styled.button`
+  font-size: 18px;
+  font-weight: 600;
+  padding: .3rem;
+  border: none;
+  color: #fff;
+  background-color: #77b5ef;
+`
+
+export const Input = styled.input`
+    width: 400px;
+    height: 8px;
+    margin-top: 9px;
+    padding: 7px;
 `;

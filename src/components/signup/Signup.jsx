@@ -77,7 +77,6 @@ export const Signup = () => {
                             <_.AuthCodeNumber {...register("authCode")} />
                         </_.EmailInputWrap>
                     </_.InfoWrap>
-
                     <_.InfoWrap>
                         <_.EmailInputWrap>
                             <_.EmailTitle>비밀번호</_.EmailTitle>

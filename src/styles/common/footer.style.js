@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 const maincolor = "#E9E9E9";
 
 export const FooterContainer = styled.div`
-  position: fixed;
+  /* position: fixed; */
+  display: flex;
   width: 100%;
   height: 70px;
   background-color: ${maincolor};
@@ -13,7 +14,6 @@ export const FooterContainer = styled.div`
 `;
 
 export const FooterLeft = styled.div`
-  width: 200px;
   height: 70px;
   background-color: ${maincolor};
 `;
@@ -26,7 +26,6 @@ export const LeftLogo = styled.p`
 `;
 
 export const FooterRight = styled.div`
-  width: 400px;
   height: 70px;
   background-color: ${maincolor};
 `;

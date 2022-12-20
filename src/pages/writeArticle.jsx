@@ -4,17 +4,37 @@ import * as S from "../styles/community/community.style";
 import { useNavigate } from "react-router";
 import { Editor } from '@tinymce/tinymce-react';
 import { useForm } from "react-hook-form";
+import { useEffect } from "react";
+import instanceWithToken from "../components/api/axiosWithToken.instance";
 
 export const WriteArticle = ({ subject }) => {
 
-    const navigate = useNavigate();
-    const { register, handleSubmit, formState: { isSubmitting, errors } } = useForm();
+    useEffect(() => {
+        setValue("boardId", subject);
+    }, [subject])
 
-    return <S.Warpper>
+    const { register, handleSubmit, formState: { isSubmitting }, setValue } = useForm();
+    const navigate = useNavigate();
+
+    const onSubmit = async (data) => {
+        console.log(data);
+        await instanceWithToken.post("/api/board/create/article", {...data});
+        navigate(`/community/${subject}`)
+    }
+
+    const handleEditorChange = (content) => {
+        setValue("content", content);
+    };
+
+    return <S.Warpper onSubmit={handleSubmit(onSubmit)}>
         <S.Header>
-            <S.All>제목</S.All>
-            <input {...register("title")}></input>
-            {subject && <S.Add onClick={() => navigate('write')}>작성하기</S.Add>}
+            <S.All>
+                <S.Label>제목</S.Label>
+                <S.Input {...register("title")}></S.Input>
+            </S.All>
+            <S.Submit type="submit" disabled={isSubmitting}>
+                {isSubmitting? "작성 중.." : "작성"}
+            </S.Submit>
         </S.Header>
         <Editor
             apiKey="qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc"
@@ -35,18 +55,9 @@ export const WriteArticle = ({ subject }) => {
                 toolbar:
                     "undo redo codesample| styleselect | fontsizeselect | code | bold italic | alignleft aligncenter alignright alignjustify | outdent indent"
             }}
-            // onEditorChange={handleEditorChange}
+            onEditorChange={handleEditorChange}
         />
     </S.Warpper>
 };
 
 export default WriteArticle;
-
-const Frame = styled.div`
-  display: flex;
-  margin-left: 40px;
-  margin-top: 25px;
-  column-gap: 10px;
-  width: 90%;
-  height: 100%;
-`;

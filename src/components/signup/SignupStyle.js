@@ -1,21 +1,22 @@
 import styled from "styled-components";
 
 export const BackDrop = styled.div`
-width: 100%;
+  width: 100%;
   height: 100%;
-  position: fixed;
   display: flex;
   flex-flow: row wrep;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
+
 `;
 
 export const SignupContainer = styled.form`
     width: 700px;
-    height: 1000px;
     background-color: #fff;
-    margin: 0 auto;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    padding-bottom: 5rem;
 `;
 
 export const SignupTitleWrap = styled.div`
@@ -40,9 +41,13 @@ export const SignupSubText = styled.div`
 `;
 
 export const InfoWrap = styled.div`
-    width: 85%;
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     height: 150px;
-    margin-left: 40px;
 `;
 
 export const EmailInputWrap = styled.div`
@@ -94,6 +99,7 @@ export const PasswordInput = styled.input`
 `;
 
 export const InfoBtnWrap = styled.div`
+    padding-top: 4rem;
     width: 30%;
     height: 40px;
     display: flex;
@@ -104,10 +110,12 @@ export const InfoBtnWrap = styled.div`
 export const SignupBtn = styled.button`
   font-size: 18px;
   font-weight: 700;
-  padding-top: 8px;
   width: 80px;
   height: 35px;
   border: none;
   color: #fff;
   background-color: #77b5ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `

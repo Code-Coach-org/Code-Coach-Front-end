@@ -1,19 +1,25 @@
 // import { Carousel } from "react-carousel-minimal";
-
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 export default function Slick() {
+
+  useEffect(() => {
+
+  })
+
   const settings = {
     dots: false, // 점은 안 보이게
     infinite: true, // 무한으로 즐기게
     speed: 500,
     slidesToShow: 1, //4장씩 보이게 해주세요
-    slidesToScroll: 1, //1장씩 넘어가세요
-
+    slidesToScroll: 1, //1장씩 넘어가세요'
+    style: {
+      height: "30rem"
+    },
     responsive: [
       {
         breakpoint: 1200,

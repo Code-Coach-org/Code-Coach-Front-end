@@ -122,12 +122,14 @@ export const PasswordChange = styled.button`
   width: 120px;
   height: 35px;
   text-align: center;
-  padding-top: 8px;
   background-color: #ffc165;
   font-size: 18px;
   font-weight: 700;
   color: #fff;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Complete = styled.button`
