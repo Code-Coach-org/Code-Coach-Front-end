@@ -15,20 +15,22 @@ const My = () => {
 
     <>
       {isOpen ? (
-        <_.ModalBackdrop onClick={openModalHandler}>
+        <_.ModalBackdrop>
           <_.ModalView>
             <_.LogoWrap>
-              <ImCross className="logo" />
+              <ImCross className="logo" onClick={openModalHandler} />
             </_.LogoWrap>
             <_.PasswordWrap>
               <_.PasswordText>새 비밀번호</_.PasswordText>
-              <_.NewPasswordInput></_.NewPasswordInput>
+              <_.NewPasswordInput type="password"></_.NewPasswordInput>
             </_.PasswordWrap>
 
             <_.PasswordWrap>
               <_.PasswordText>비밀번호 확인</_.PasswordText>
-              <_.NewPasswordInput></_.NewPasswordInput>
+              <_.NewPasswordInput type="password"></_.NewPasswordInput>
             </_.PasswordWrap>
+
+            
           </_.ModalView>
         </_.ModalBackdrop>
       ) : null}
