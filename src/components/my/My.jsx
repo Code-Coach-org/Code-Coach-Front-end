@@ -4,7 +4,7 @@ import { ImCross } from "react-icons/im"
 
 import * as _ from "./MyStyle";
 const My = () => {
-  
+  const [isLogin,setIsLogin] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
 
   const openModalHandler = () => {
@@ -14,6 +14,7 @@ const My = () => {
   return (
 
     <>
+      {isLogin ? <>
       {isOpen ? (
         <_.ModalBackdrop>
           <_.ModalView>
@@ -30,7 +31,7 @@ const My = () => {
               <_.NewPasswordInput type="password"></_.NewPasswordInput>
             </_.PasswordWrap>
 
-            
+            <_.PasswordConfirmBtn onClick={openModalHandler}>확인</_.PasswordConfirmBtn>
           </_.ModalView>
         </_.ModalBackdrop>
       ) : null}
@@ -82,6 +83,7 @@ const My = () => {
           </_.MyProfileWrap>
         </_.MyInfo>
       </_.MyContainer>
+    </> : <div>You can use after login</div>}
     </>
 
   );

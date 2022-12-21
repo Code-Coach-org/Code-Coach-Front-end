@@ -130,6 +130,7 @@ export const PasswordChange = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 `;
 
 export const Complete = styled.button`
@@ -201,6 +202,18 @@ export const NewPasswordInput = styled.input`
   &:focus{
     outline: none;
   }
+`;
+
+export const PasswordConfirmBtn = styled.button`
+  width: 100px;
+  height: 40px;
+  margin-top: 50px;
+  border: none;
+  background-color:  #78B5EF;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
 `;
 
 export const ModalView = styled.div.attrs(props => ({
